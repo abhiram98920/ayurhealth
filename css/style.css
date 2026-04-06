@@ -1762,10 +1762,20 @@ header.scrolled {
     .hero-vertical-text, .hero-vertical-text-left { display: none; }
     .about-section, .specstrip, .treatments-section, .packages-section,
     .testimonials-section, .blog-section { padding: 60px 0; }
+    
+    .hero-scroll-indicator {
+        position: absolute;
+        bottom: 80px;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+    }
 }
 
 @media (max-width: 768px) {
-    .testi-card, .blog-card { min-width: calc(90vw - 24px); }
+    .testi-card { min-width: 100%; width: 100%; flex: 0 0 100%; padding: 25px 20px; }
+    .blog-card { min-width: calc(90vw - 24px); }
     .spec-cards { grid-template-columns: 1fr; }
     .treatment-grid { grid-template-columns: 1fr; }
     .package-grid { grid-template-columns: 1fr; }
