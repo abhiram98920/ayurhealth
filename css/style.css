@@ -1328,7 +1328,8 @@ header.scrolled {
 }
 @media(min-width: 900px) {
     .testi-card {
-        min-width: calc(50% - 12px); /* Show exactly 2 cards in a row */
+        min-width: calc(40% - 12px);
+        max-width: 480px;
     }
 }
 
