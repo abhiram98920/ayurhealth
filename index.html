@@ -41,11 +41,19 @@
                 </ul>
             </li>
             <li><a href="treatments.html">Therapies</a></li>
+            <li><a href="products.html">Store</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="nav-right">
+    <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
+        <div class="header-search">
+            <button class="search-toggle" onclick="document.getElementById('top-search').classList.toggle('active')" aria-label="Search"><i class="fas fa-search"></i></button>
+            <form id="top-search" class="search-form" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Search Ayurveda..." required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
         <a href="#enquiry" class="connect-pill">Book Now</a>
     </div>
 </header>

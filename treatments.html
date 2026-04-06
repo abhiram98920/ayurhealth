@@ -15,12 +15,12 @@
 
 <!-- ===== HEADER — CENTERED NAV ===== -->
 <header id="main-header">
-    <a href="index.html" class="logo-link">
+    <a href="#" class="logo-link">
         <img src="assets/logo.webp" alt="Ayur Health – Ayurvedic Medical Centre" class="logo-img">
     </a>
     <nav class="nav-center">
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li class="dropdown">
                 <a href="about-us.html">About <i class="fas fa-chevron-down" style="font-size:0.65em; margin-left:3px; opacity:0.7;"></i></a>
                 <ul class="dropdown-menu">
@@ -37,101 +37,112 @@
                     <li><a href="treatments.html">Curative Therapies</a></li>
                     <li><a href="treatments.html">Panchakarma</a></li>
                     <li><a href="treatments.html">Wellness Treatments</a></li>
-                    <li><a href="treatments.html">Women's Health</a></li>
+                    <li><a href="specialties.html">Women's Health</a></li>
                 </ul>
             </li>
             <li><a href="treatments.html">Therapies</a></li>
+            <li><a href="products.html">Store</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="nav-right">
+    <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
+        <div class="header-search">
+            <button class="search-toggle" onclick="document.getElementById('top-search').classList.toggle('active')" aria-label="Search"><i class="fas fa-search"></i></button>
+            <form id="top-search" class="search-form" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Search Ayurveda..." required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
         <a href="#enquiry" class="connect-pill">Book Now</a>
     </div>
 </header>
 
 <!-- ===== HERO ===== -->
 
-    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px;">
-        <div class="hero-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; background:var(--primary); overflow:hidden;"></div>
+    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px; background: url('assets/1498837167922-ddd27525d352.jpg') center/cover no-repeat; position: relative;">
+        <!-- Dark overlay -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(6,30,30,0.8), rgba(6,30,30,0.4)); z-index:1;"></div>
+        <div class="hero-watermark" aria-hidden="true" style="opacity:0.04; font-size:12vw; white-space:nowrap; top:50%; text-shadow:none;">AYURVEDIC TREATMENTS</div>
         <div class="container" style="position:relative; z-index:10; text-align:center;">
-            <h1 style="color:var(--white); font-size:4rem; margin:0;">Ayurvedic Treatments</h1>
+            <p style="color:var(--accent); font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:10px;">Ayur Health</p>
+            <h1 style="color:var(--white); font-size:4rem; margin:0; text-shadow: 0 5px 20px rgba(0,0,0,0.3);">Ayurvedic Treatments</h1>
         </div>
     </section>
     
-<section class="treatments-section" style="background:var(--cream); padding: 80px 0;">
+<section class="treatments-section" style="padding: 100px 0;">
     <div class="container">
-        <div class="section-head text-center" style="max-width:800px; margin:0 auto 50px;">
+        <div class="section-head text-center" style="max-width:800px; margin:0 auto 60px;">
             <span class="label">Authentic Methods</span>
-            <h2 style="color:var(--primary); font-size:3rem; margin-bottom:15px;">Curative Therapies</h2>
-            <p>From full-body rejuvenation to targeted pain relief, explore our comprehensive range of authentic Ayurvedic treatments.</p>
+            <h2 style="color:var(--white); font-size:3rem; margin-bottom:15px;">Curative Therapies</h2>
+            <p style="color:rgba(255,255,255,0.8);">From full-body rejuvenation to targeted pain relief, explore our comprehensive range of authentic Ayurvedic treatments.</p>
         </div>
         
         <div class="treatment-grid">
             <!-- Abhyanga -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1600334089648-b0d9d3028eb2.jpg" alt="Abhyangam">
                 </div>
                 <div class="card-body">
-                    <h3>Abhyangam (Oil Massage)</h3>
+                    <h3 style="color:var(--white);">Abhyangam (Oil Massage)</h3>
                     <p>Enhances blood circulation, relieves muscular tension, promotes deep relaxation, and strengthens immunity.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Abhyangam')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Abhyangam')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
             <!-- Panchakarma -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1555252333-9f8e92e65df9.jpg" alt="Panchakarma">
                 </div>
                 <div class="card-body">
-                    <h3>Panchakarma Therapy</h3>
+                    <h3 style="color:var(--white);">Panchakarma Therapy</h3>
                     <p>Comprehensive detoxification procedures including Vamana, Virechana, Basti, Nasya, and Raktamokshana.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Panchakarma Therapy')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Panchakarma Therapy')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
             <!-- Shirodhara -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1544367567-0f2fcb009e0b.jpg" alt="Shirodhara">
                 </div>
                 <div class="card-body">
-                    <h3>Shirodhara</h3>
+                    <h3 style="color:var(--white);">Shirodhara</h3>
                     <p>Continuous pouring of warm oil on the forehead for profound mental relaxation and nervous system support.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Shirodhara')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Shirodhara')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
             <!-- Swedana -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1584515933487-779824d29309.jpg" alt="Swedana">
                 </div>
                 <div class="card-body">
-                    <h3>Swedana (Steam Therapy)</h3>
+                    <h3 style="color:var(--white);">Swedana (Steam Therapy)</h3>
                     <p>Traditional herbal steam treatment designed to promote sweating, open pores, and accelerate detoxification.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Swedana')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Swedana')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
              <!-- Herbal Facial -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1616394584738-fc6e612e71b9.jpg" alt="Herbal Facial">
                 </div>
                 <div class="card-body">
-                    <h3>Herbal Facial</h3>
+                    <h3 style="color:var(--white);">Herbal Facial</h3>
                     <p>Natural skin rejuvenation deeply nourishing the skin, improving glow, and reducing acne and blemishes.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Herbal Facial')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Herbal Facial')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
              <!-- Udwarthanam -->
-            <div class="treatment-card">
+            <div class="treatment-card" style="background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); color:rgba(255,255,255,0.8);">
                 <div class="card-img-wrap">
                     <img src="assets/1621252179027-94459d278660.jpg" alt="Udwarthanam">
                 </div>
                 <div class="card-body">
-                    <h3>Udwarthanam</h3>
+                    <h3 style="color:var(--white);">Udwarthanam</h3>
                     <p>Invigorating deep tissue massage utilizing herbal powders to stimulate lymphatic drainage and assist weight loss.</p>
-                    <button class="enquire-btn" onclick="openEnquiry('Udwarthanam')">Enquire Now</button>
+                    <button class="enquire-btn" onclick="openEnquiry('Udwarthanam')" style="border-color:var(--accent); color:var(--cream);">Enquire Now</button>
                 </div>
             </div>
         </div>

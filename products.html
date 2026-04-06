@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayurvedic Blog | Ayur Health</title>
+    <title>Ayurvedic Products | Ayur Health</title>
     <meta name="description" content="Authentic clinical Ayurveda & Panchakarma in Dubai. Precision restoration, profound vitality. Browse our treatments and packages.">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpath fill='%23d4b28c' d='M50 0C50 0 10 30 10 70C10 90 30 100 50 100C70 100 90 90 90 70C90 30 50 0 50 0ZM50 85C35 85 25 75 25 60C25 40 50 15 50 15C50 15 75 40 75 60C75 75 65 85 50 85Z'/%3E%3C/svg%3E">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -60,73 +60,139 @@
 
 <!-- ===== HERO ===== -->
 
-    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px; background: url('assets/1584515933487-779824d29309.jpg') center/cover no-repeat; position: relative;">
+    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px; background: url('assets/1498837167922-ddd27525d352.jpg') center/cover no-repeat; position: relative;">
         <!-- Dark overlay -->
         <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(6,30,30,0.8), rgba(6,30,30,0.4)); z-index:1;"></div>
-        <div class="hero-watermark" aria-hidden="true" style="opacity:0.04; font-size:12vw; white-space:nowrap; top:50%; text-shadow:none;">AYURVEDIC BLOG</div>
+        <div class="hero-watermark" aria-hidden="true" style="opacity:0.04; font-size:12vw; white-space:nowrap; top:50%; text-shadow:none;">AYURVEDIC PRODUCTS</div>
         <div class="container" style="position:relative; z-index:10; text-align:center;">
             <p style="color:var(--accent); font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:10px;">Ayur Health</p>
-            <h1 style="color:var(--white); font-size:4rem; margin:0; text-shadow: 0 5px 20px rgba(0,0,0,0.3);">Ayurvedic Blog</h1>
+            <h1 style="color:var(--white); font-size:4rem; margin:0; text-shadow: 0 5px 20px rgba(0,0,0,0.3);">Ayurvedic Products</h1>
         </div>
     </section>
     
-<section class="blog-section" style="padding: 100px 0; background:transparent;">
+<section style="padding: 100px 0;">
     <div class="container">
-        <div class="section-head text-center" style="max-width:800px; margin:0 auto 60px;">
-            <span class="label">Insights</span>
-            <h2 style="color:var(--white); font-size:3rem; margin-bottom:15px;">Ayurvedic Wisdom</h2>
-            <p style="color:rgba(255,255,255,0.8);">Dive into a treasury of mindful reflections, timeless wisdom, and practical guidance on holistic wellness.</p>
+        
+        <!-- Search Results Header (Hidden by default, used by JS) -->
+        <div id="search-results-header" style="display:none; text-align:center; margin-bottom:40px;">
+            <p style="color:var(--accent); font-size:1.2rem;">Showing results for: <span id="search-term" style="color:white; font-weight:bold;"></span></p>
+        </div>
+
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:40px; flex-wrap:wrap; gap:20px;">
+            <div class="filter-tabs" style="display:flex; gap:10px; flex-wrap:wrap;">
+                <button class="tab-btn active" data-filter="all" style="background:rgba(255,255,255,0.05); color:white; border:1px solid rgba(212,178,140,0.5); padding:8px 20px; border-radius:30px; cursor:pointer;">All Products</button>
+                <button class="tab-btn" data-filter="oils" style="background:rgba(255,255,255,0.05); color:white; border:1px solid transparent; padding:8px 20px; border-radius:30px; cursor:pointer;">Herbal Oils</button>
+                <button class="tab-btn" data-filter="supplements" style="background:rgba(255,255,255,0.05); color:white; border:1px solid transparent; padding:8px 20px; border-radius:30px; cursor:pointer;">Supplements</button>
+                <button class="tab-btn" data-filter="skincare" style="background:rgba(255,255,255,0.05); color:white; border:1px solid transparent; padding:8px 20px; border-radius:30px; cursor:pointer;">Skincare</button>
+            </div>
+        </div>
+
+        <div class="product-grid" id="productGrid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:30px;">
+            <!-- Prod 1 -->
+            <a href="product-details.html" class="prod-item" data-cat="oils" style="text-decoration:none; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); border-radius:15px; overflow:hidden; display:block; transition:transform 0.3s ease;">
+                <div style="height:220px; overflow:hidden;">
+                    <img src="assets/1505576399279-565b52d4ac71.jpg" alt="Kumkumadi Tailam" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="padding:25px;">
+                    <h3 style="color:var(--white); font-size:1.3rem; margin-bottom:10px;">Kumkumadi Tailam</h3>
+                    <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:15px;">Authentic saffron oil for glowing skin & pigmentation.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="color:var(--accent); font-weight:bold; font-size:1.2rem;">AED 120</span>
+                        <span style="color:white; font-size:0.9rem; border-bottom:1px solid var(--accent);">View Details</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Prod 2 -->
+            <a href="product-details.html" class="prod-item" data-cat="supplements" style="text-decoration:none; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); border-radius:15px; overflow:hidden; display:block; transition:transform 0.3s ease;">
+                <div style="height:220px; overflow:hidden;">
+                    <img src="assets/1498837167922-ddd27525d352.jpg" alt="Ashwagandha Extract" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="padding:25px;">
+                    <h3 style="color:var(--white); font-size:1.3rem; margin-bottom:10px;">Ashwagandha Extract</h3>
+                    <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:15px;">Premium adaptogen for stress relief and vitality.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="color:var(--accent); font-weight:bold; font-size:1.2rem;">AED 85</span>
+                        <span style="color:white; font-size:0.9rem; border-bottom:1px solid var(--accent);">View Details</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Prod 3 -->
+            <a href="product-details.html" class="prod-item" data-cat="skincare" style="text-decoration:none; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); border-radius:15px; overflow:hidden; display:block; transition:transform 0.3s ease;">
+                <div style="height:220px; overflow:hidden;">
+                    <img src="assets/1518611012118-696072aa579a.jpg" alt="Nalpamaradi Bath Powder" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="padding:25px;">
+                    <h3 style="color:var(--white); font-size:1.3rem; margin-bottom:10px;">Nalpamaradi Ubtan</h3>
+                    <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:15px;">Ayurvedic bath powder for deep cleansing.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="color:var(--accent); font-weight:bold; font-size:1.2rem;">AED 65</span>
+                        <span style="color:white; font-size:0.9rem; border-bottom:1px solid var(--accent);">View Details</span>
+                    </div>
+                </div>
+            </a>
+            <!-- Prod 4 -->
+            <a href="product-details.html" class="prod-item" data-cat="oils" style="text-decoration:none; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); border-radius:15px; overflow:hidden; display:block; transition:transform 0.3s ease;">
+                <div style="height:220px; overflow:hidden;">
+                    <img src="assets/1519415943484-9fa1873496d4.jpg" alt="Brahmi Hair Oil" style="width:100%; height:100%; object-fit:cover;">
+                </div>
+                <div style="padding:25px;">
+                    <h3 style="color:var(--white); font-size:1.3rem; margin-bottom:10px;">Brahmi Amla Hair Oil</h3>
+                    <p style="color:rgba(255,255,255,0.6); font-size:0.9rem; margin-bottom:15px;">Nourishes scalp and prevents hair fall naturally.</p>
+                    <div style="display:flex; justify-content:space-between; align-items:center;">
+                        <span style="color:var(--accent); font-weight:bold; font-size:1.2rem;">AED 90</span>
+                        <span style="color:white; font-size:0.9rem; border-bottom:1px solid var(--accent);">View Details</span>
+                    </div>
+                </div>
+            </a>
         </div>
         
-        <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:30px;">
-            <div class="blog-card" style="box-shadow: 0 10px 40px rgba(0,0,0,0.2); min-width:unset; margin:0; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); backdrop-filter:blur(10px);">
-                <div class="blog-img-wrap">
-                    <img src="assets/1544367567-0f2fcb009e0b.jpg" alt="Ayurveda Lifestyle">
-                    <div class="blog-tag">Ayurveda</div>
-                </div>
-                <div class="blog-body" style="padding:25px;">
-                    <h3 style="color:var(--white);">Ayurveda & Modern Lifestyle</h3>
-                    <p style="color:rgba(255,255,255,0.7);">Discover how ancient principles apply to managing modern stress.</p>
-                    <div class="blog-footer" style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
-                        <span class="blog-date" style="color:var(--accent); font-size:0.9rem;">Feb 05, 2026</span>
-                        <a href="blog-post.html" class="blog-read" style="background:var(--accent); color:var(--primary); width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:50%;"><i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-card" style="box-shadow: 0 10px 40px rgba(0,0,0,0.2); min-width:unset; margin:0; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); backdrop-filter:blur(10px);">
-                <div class="blog-img-wrap">
-                    <img src="assets/1600334089648-b0d9d3028eb2.jpg" alt="Detox Science">
-                    <div class="blog-tag">Panchakarma</div>
-                </div>
-                <div class="blog-body" style="padding:25px;">
-                    <h3 style="color:var(--white);">The Science of Deep Detox</h3>
-                    <p style="color:rgba(255,255,255,0.7);">A comprehensive look at how Panchakarma resets your immunity.</p>
-                    <div class="blog-footer" style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
-                        <span class="blog-date" style="color:var(--accent); font-size:0.9rem;">Jan 18, 2026</span>
-                        <a href="blog-post.html" class="blog-read" style="background:var(--accent); color:var(--primary); width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:50%;"><i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="blog-card" style="box-shadow: 0 10px 40px rgba(0,0,0,0.2); min-width:unset; margin:0; background:rgba(255,255,255,0.03); border:1px solid rgba(212,178,140,0.1); backdrop-filter:blur(10px);">
-                <div class="blog-img-wrap">
-                    <img src="assets/1552693673-1bf958298935.jpg" alt="Dosha Diet">
-                    <div class="blog-tag">Diet</div>
-                </div>
-                <div class="blog-body" style="padding:25px;">
-                    <h3 style="color:var(--white);">Eating For Your Dosha</h3>
-                    <p style="color:rgba(255,255,255,0.7);">Why a one-size-fits-all diet fails, and how Ayurvedic nutrition unlocks natural energy.</p>
-                    <div class="blog-footer" style="display:flex; justify-content:space-between; align-items:center; margin-top:15px;">
-                        <span class="blog-date" style="color:var(--accent); font-size:0.9rem;">Dec 12, 2025</span>
-                        <a href="blog-post.html" class="blog-read" style="background:var(--accent); color:var(--primary); width:40px; height:40px; display:flex; align-items:center; justify-content:center; border-radius:50%;"><i class="fas fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
     </div>
 </section>
+
+<script>
+    // Product Search and Filter JS
+    document.addEventListener('DOMContentLoaded', () => {
+        const prodItems = document.querySelectorAll('.prod-item');
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        
+        if(query) {
+            document.getElementById('search-results-header').style.display = 'block';
+            document.getElementById('search-term').innerText = query;
+            const qLower = query.toLowerCase();
+            
+            prodItems.forEach(item => {
+                const text = item.innerText.toLowerCase();
+                if(text.includes(qLower)) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        }
+        
+        // Tab Filtering
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('active');
+                    b.style.borderColor = 'transparent';
+                });
+                btn.classList.add('active');
+                btn.style.borderColor = 'rgba(212,178,140,0.5)';
+                
+                const filter = btn.dataset.filter;
+                prodItems.forEach(item => {
+                    if(filter === 'all' || item.dataset.cat === filter) {
+                        item.style.display = 'block';
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+            });
+        });
+    });
+</script>
 
 
 <!-- ===== FOOTER ===== -->

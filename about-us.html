@@ -15,12 +15,12 @@
 
 <!-- ===== HEADER — CENTERED NAV ===== -->
 <header id="main-header">
-    <a href="index.html" class="logo-link">
+    <a href="#" class="logo-link">
         <img src="assets/logo.webp" alt="Ayur Health – Ayurvedic Medical Centre" class="logo-img">
     </a>
     <nav class="nav-center">
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li class="dropdown">
                 <a href="about-us.html">About <i class="fas fa-chevron-down" style="font-size:0.65em; margin-left:3px; opacity:0.7;"></i></a>
                 <ul class="dropdown-menu">
@@ -37,84 +37,96 @@
                     <li><a href="treatments.html">Curative Therapies</a></li>
                     <li><a href="treatments.html">Panchakarma</a></li>
                     <li><a href="treatments.html">Wellness Treatments</a></li>
-                    <li><a href="treatments.html">Women's Health</a></li>
+                    <li><a href="specialties.html">Women's Health</a></li>
                 </ul>
             </li>
             <li><a href="treatments.html">Therapies</a></li>
+            <li><a href="products.html">Store</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="nav-right">
+    <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
+        <div class="header-search">
+            <button class="search-toggle" onclick="document.getElementById('top-search').classList.toggle('active')" aria-label="Search"><i class="fas fa-search"></i></button>
+            <form id="top-search" class="search-form" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Search Ayurveda..." required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
         <a href="#enquiry" class="connect-pill">Book Now</a>
     </div>
 </header>
 
 <!-- ===== HERO ===== -->
 
-    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px;">
-        <div class="hero-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; background:var(--primary); overflow:hidden;"></div>
+    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px; background: url('assets/1540555700478-4be289fbecef.jpg') center/cover no-repeat; position: relative;">
+        <!-- Dark overlay -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(6,30,30,0.8), rgba(6,30,30,0.4)); z-index:1;"></div>
+        <div class="hero-watermark" aria-hidden="true" style="opacity:0.04; font-size:12vw; white-space:nowrap; top:50%; text-shadow:none;">ABOUT US</div>
         <div class="container" style="position:relative; z-index:10; text-align:center;">
-            <h1 style="color:var(--white); font-size:4rem; margin:0;">About Us</h1>
+            <p style="color:var(--accent); font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:10px;">Ayur Health</p>
+            <h1 style="color:var(--white); font-size:4rem; margin:0; text-shadow: 0 5px 20px rgba(0,0,0,0.3);">About Us</h1>
         </div>
     </section>
     
-<section class="about-section" style="background:var(--cream); padding: 80px 0;">
+<!-- Notice: NO inline background: #fff! We let it be dark (var(--primary)) by default! -->
+<section style="padding: 100px 0;">
     <div class="container">
         <div class="about-grid" style="grid-template-columns: 1fr; max-width: 900px; margin: 0 auto; text-align: center;">
             <span class="label">About Ayur Health</span>
-            <h2 style="font-size:3rem; margin-bottom:20px; color:var(--primary);">Expert Medical Care <br>with a Loving Touch</h2>
-            <p style="font-size:1.1rem; line-height:1.8; color:#4a5f5f; margin-bottom:20px;">At our clinic, we combine the ancient knowledge of Ayurveda with modern medical care. When you visit us, you are not just a patient; you become a part of our family. We know that real healing takes time. That is why our treatments are specially made to match your unique body type (Prakriti).</p>
-            <p style="font-size:1.1rem; line-height:1.8; color:#4a5f5f;">Your journey starts with a detailed and caring consultation. Our expert doctors take the time to truly listen to your problems. They check your pulse (Nadi Pariksha) to understand the balance of Vata, Pitta, and Kapha doshas inside you.</p>
+            <h2 style="font-size:3rem; margin-bottom:20px; color:var(--white);">Expert Medical Care <br>with a Loving Touch</h2>
+            <p style="font-size:1.1rem; line-height:1.8; color:rgba(255,255,255,0.8); margin-bottom:20px;">At our clinic, we combine the ancient knowledge of Ayurveda with modern medical care. When you visit us, you are not just a patient; you become a part of our family. We know that real healing takes time. That is why our treatments are specially made to match your unique body type (Prakriti).</p>
+            <p style="font-size:1.1rem; line-height:1.8; color:rgba(255,255,255,0.8);">Your journey starts with a detailed and caring consultation. Our expert doctors take the time to truly listen to your problems. They check your pulse (Nadi Pariksha) to understand the balance of Vata, Pitta, and Kapha doshas inside you.</p>
         </div>
         
         <div class="mission-vision-grid" style="display:grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap:30px; margin-top:60px;">
-            <div style="background:var(--white); padding:40px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.05); text-align:center;">
+            <div style="background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(212,178,140,0.1); padding:40px; border-radius:15px; text-align:center;">
                 <i class="fas fa-bullseye" style="font-size:3rem; color:var(--accent); margin-bottom:20px;"></i>
-                <h3 style="color:var(--primary);">Our Mission</h3>
-                <p style="color:#555; line-height:1.7;">To expertly deliver curative, root-cause therapies that treat complex conditions and restore sustained vitality.</p>
+                <h3 style="color:var(--white);">Our Mission</h3>
+                <p style="color:rgba(255,255,255,0.7); line-height:1.7;">To expertly deliver curative, root-cause therapies that treat complex conditions and restore sustained vitality.</p>
             </div>
-            <div style="background:var(--white); padding:40px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.05); text-align:center;">
+            <div style="background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(212,178,140,0.1); padding:40px; border-radius:15px; text-align:center;">
                 <i class="fas fa-eye" style="font-size:3rem; color:var(--accent); margin-bottom:20px;"></i>
-                <h3 style="color:var(--primary);">Our Vision</h3>
-                <p style="color:#555; line-height:1.7;">To be the definitive centre of excellence for clinical ayurveda and holistic recovery in the GCC.</p>
+                <h3 style="color:var(--white);">Our Vision</h3>
+                <p style="color:rgba(255,255,255,0.7); line-height:1.7;">To be the definitive centre of excellence for clinical ayurveda and holistic recovery in the GCC.</p>
             </div>
-            <div style="background:var(--white); padding:40px; border-radius:15px; box-shadow:0 10px 30px rgba(0,0,0,0.05); text-align:center;">
+            <div style="background:rgba(255,255,255,0.03); backdrop-filter:blur(20px); -webkit-backdrop-filter:blur(20px); border:1px solid rgba(212,178,140,0.1); padding:40px; border-radius:15px; text-align:center;">
                 <i class="fas fa-heart" style="font-size:3rem; color:var(--accent); margin-bottom:20px;"></i>
-                <h3 style="color:var(--primary);">Core Values</h3>
-                <p style="color:#555; line-height:1.7;">Clinical Authority, Holistic Precision, and Sustained Restoration with an unwavering commitment to your wellbeing.</p>
+                <h3 style="color:var(--white);">Core Values</h3>
+                <p style="color:rgba(255,255,255,0.7); line-height:1.7;">Clinical Authority, Holistic Precision, and Sustained Restoration with an unwavering commitment to your wellbeing.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="doctors" style="background:#fff; padding: 80px 0;">
+<section id="doctors" style="padding: 80px 0; background:rgba(0,0,0,0.15);">
     <div class="container">
-        <div class="about-grid" style="align-items: center;">
+        <div class="about-grid" style="align-items: center; gap: 60px;">
             <div class="about-img-wrap" style="position:relative;">
-                <img src="assets/dr-chitra.png" alt="Dr. Chitra Menon" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.1);">
+                <img src="assets/dr-chitra.png" alt="Dr. Chitra Menon" style="width:100%; border-radius:15px; box-shadow: 0 20px 40px rgba(0,0,0,0.3);">
                 <div style="position:absolute; bottom:-20px; right:-20px; background:var(--accent); color:var(--primary); padding:20px; border-radius:10px; font-weight:bold;">Lead Physician</div>
             </div>
             <div class="about-content">
                 <span class="label">Director's Message</span>
-                <h2 style="color:var(--primary);">Dr. Chitra Menon</h2>
-                <p>Dr. Chitra Menon is a highly skilled and experienced Ayurvedic physician known for her integrative, patient–centered approach to holistic healing.</p>
-                <p>With extensive experience in classical ayurveda, therapeutic panchakarma, life style management and natural wellness, she combines traditional principles with evidence-based practices to deliver personalized treatment plans.</p>
+                <h2 style="color:var(--white);">Dr. Chitra Menon</h2>
+                <p style="color:rgba(255,255,255,0.8); line-height:1.8;">Dr. Chitra Menon is a highly skilled and experienced Ayurvedic physician known for her integrative, patient–centered approach to holistic healing.</p>
+                <p style="color:rgba(255,255,255,0.8); line-height:1.8;">With extensive experience in classical ayurveda, therapeutic panchakarma, life style management and natural wellness, she combines traditional principles with evidence-based practices to deliver personalized treatment plans.</p>
             </div>
         </div>
     </div>
 </section>
 
-<section id="facilities" style="background:var(--cream); padding: 80px 0;">
+<section id="facilities" style="padding: 100px 0;">
     <div class="container text-center">
         <span class="label">World Class</span>
-        <h2 style="color:var(--primary); margin-bottom:40px; font-size:3rem;">Our Facilities</h2>
+        <h2 style="color:var(--white); margin-bottom:40px; font-size:3rem;">Our Facilities</h2>
         <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:15px;">
-            <span class="btn-primary" style="background:var(--white); color:var(--primary); border:1px solid #ddd;">Treatment Rooms</span>
-            <span class="btn-primary" style="background:var(--white); color:var(--primary); border:1px solid #ddd;">Consultation Room</span>
-            <span class="btn-primary" style="background:var(--white); color:var(--primary); border:1px solid #ddd;">Herbal Medicine Dispensary</span>
-            <span class="btn-primary" style="background:var(--white); color:var(--primary); border:1px solid #ddd;">Ladies Waiting Area</span>
-            <span class="btn-primary" style="background:var(--white); color:var(--primary); border:1px solid #ddd;">Prayer Room</span>
+            <span class="btn-primary" style="background:rgba(255,255,255,0.05); color:var(--cream); border:1px solid rgba(212,178,140,0.3);">Treatment Rooms</span>
+            <span class="btn-primary" style="background:rgba(255,255,255,0.05); color:var(--cream); border:1px solid rgba(212,178,140,0.3);">Consultation Room</span>
+            <span class="btn-primary" style="background:rgba(255,255,255,0.05); color:var(--cream); border:1px solid rgba(212,178,140,0.3);">Herbal Medicine Dispensary</span>
+            <span class="btn-primary" style="background:rgba(255,255,255,0.05); color:var(--cream); border:1px solid rgba(212,178,140,0.3);">Ladies Waiting Area</span>
+            <span class="btn-primary" style="background:rgba(255,255,255,0.05); color:var(--cream); border:1px solid rgba(212,178,140,0.3);">Prayer Room</span>
         </div>
     </div>
 </section>

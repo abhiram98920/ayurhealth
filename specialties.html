@@ -15,12 +15,12 @@
 
 <!-- ===== HEADER — CENTERED NAV ===== -->
 <header id="main-header">
-    <a href="index.html" class="logo-link">
+    <a href="#" class="logo-link">
         <img src="assets/logo.webp" alt="Ayur Health – Ayurvedic Medical Centre" class="logo-img">
     </a>
     <nav class="nav-center">
         <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li class="dropdown">
                 <a href="about-us.html">About <i class="fas fa-chevron-down" style="font-size:0.65em; margin-left:3px; opacity:0.7;"></i></a>
                 <ul class="dropdown-menu">
@@ -37,60 +37,71 @@
                     <li><a href="treatments.html">Curative Therapies</a></li>
                     <li><a href="treatments.html">Panchakarma</a></li>
                     <li><a href="treatments.html">Wellness Treatments</a></li>
-                    <li><a href="treatments.html">Women's Health</a></li>
+                    <li><a href="specialties.html">Women's Health</a></li>
                 </ul>
             </li>
             <li><a href="treatments.html">Therapies</a></li>
+            <li><a href="products.html">Store</a></li>
             <li><a href="blog.html">Blogs</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
-    <div class="nav-right">
+    <div class="nav-right" style="display:flex; align-items:center; gap:20px;">
+        <div class="header-search">
+            <button class="search-toggle" onclick="document.getElementById('top-search').classList.toggle('active')" aria-label="Search"><i class="fas fa-search"></i></button>
+            <form id="top-search" class="search-form" action="products.html" method="GET">
+                <input type="text" name="q" placeholder="Search Ayurveda..." required>
+                <button type="submit"><i class="fas fa-arrow-right"></i></button>
+            </form>
+        </div>
         <a href="#enquiry" class="connect-pill">Book Now</a>
     </div>
 </header>
 
 <!-- ===== HERO ===== -->
 
-    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px;">
-        <div class="hero-bg" style="position:absolute; top:0; left:0; width:100%; height:100%; z-index:0; background:var(--primary); overflow:hidden;"></div>
+    <section class="hero" style="min-height: 40vh; align-items:center; padding-top:120px; background: url('assets/1552693673-1bf958298935.jpg') center/cover no-repeat; position: relative;">
+        <!-- Dark overlay -->
+        <div style="position:absolute; top:0; left:0; width:100%; height:100%; background: linear-gradient(to right, rgba(6,30,30,0.8), rgba(6,30,30,0.4)); z-index:1;"></div>
+        <div class="hero-watermark" aria-hidden="true" style="opacity:0.04; font-size:12vw; white-space:nowrap; top:50%; text-shadow:none;">OUR SPECIALTIES</div>
         <div class="container" style="position:relative; z-index:10; text-align:center;">
-            <h1 style="color:var(--white); font-size:4rem; margin:0;">Our Specialties</h1>
+            <p style="color:var(--accent); font-weight:600; letter-spacing:4px; text-transform:uppercase; margin-bottom:10px;">Ayur Health</p>
+            <h1 style="color:var(--white); font-size:4rem; margin:0; text-shadow: 0 5px 20px rgba(0,0,0,0.3);">Our Specialties</h1>
         </div>
     </section>
     
-<section style="background:#fff; padding: 80px 0;">
+<section style="padding: 100px 0;">
     <div class="container">
-        <div class="section-head text-center mx-auto" style="max-width:700px; margin-bottom:50px;">
+        <div class="section-head text-center mx-auto" style="max-width:700px; margin-bottom:60px;">
             <span class="label">Expertise</span>
-            <h2 style="color:var(--primary); font-size:3rem; margin-bottom:15px;">Targeted Healing</h2>
-            <p>Our expert medical team provides specialized curative therapies that focus on the root cause of complex conditions.</p>
+            <h2 style="color:var(--white); font-size:3rem; margin-bottom:15px;">Targeted Healing</h2>
+            <p style="color:rgba(255,255,255,0.8);">Our expert medical team provides specialized curative therapies that focus on the root cause of complex conditions.</p>
         </div>
         
         <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap:30px;">
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Women's Health</h3>
-                <p>Comprehensive Ayurvedic support for hormonal balance, menstruation issues, PCOS, and post-natal care.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Women's Health</h3>
+                <p style="color:rgba(255,255,255,0.7);">Comprehensive Ayurvedic support for hormonal balance, menstruation issues, PCOS, and post-natal care.</p>
             </div>
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Men's Health</h3>
-                <p>Natural solutions for stress management, vitality, reproductive health, and lifestyle disorders.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Men's Health</h3>
+                <p style="color:rgba(255,255,255,0.7);">Natural solutions for stress management, vitality, reproductive health, and lifestyle disorders.</p>
             </div>
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Chronic Disease Management</h3>
-                <p>Root-cause treatments for arthritis, diabetes, hypertension, and long-standing inflammatory conditions.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Chronic Disease Management</h3>
+                <p style="color:rgba(255,255,255,0.7);">Root-cause treatments for arthritis, diabetes, hypertension, and long-standing inflammatory conditions.</p>
             </div>
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Stress Management</h3>
-                <p>Integrative therapies including Shirodhara and mindfulness to balance the nervous system and relieve chronic stress.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Stress Management</h3>
+                <p style="color:rgba(255,255,255,0.7);">Integrative therapies including Shirodhara and mindfulness to balance the nervous system and relieve chronic stress.</p>
             </div>
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Weight Management</h3>
-                <p>Customized programs utilizing Udwarthanam, diet, and lifestyle modifications to achieve sustainable weight loss.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Weight Management</h3>
+                <p style="color:rgba(255,255,255,0.7);">Customized programs utilizing Udwarthanam, diet, and lifestyle modifications to achieve sustainable weight loss.</p>
             </div>
-            <div class="spec-card reveal-up" style="padding:40px; background:var(--cream); border-radius:15px;">
-                <h3 style="color:var(--primary); margin-bottom:15px;">Hair & Skin Conditions</h3>
-                <p>Effective natural treatments for hair loss, dandruff, psoriasis, eczema, and skin vitality.</p>
+            <div class="spec-card reveal-up" style="padding:40px; background:rgba(255,255,255,0.03); backdrop-filter:blur(10px); border:1px solid rgba(212,178,140,0.1); border-radius:15px;">
+                <h3 style="color:var(--white); margin-bottom:15px;">Hair & Skin Conditions</h3>
+                <p style="color:rgba(255,255,255,0.7);">Effective natural treatments for hair loss, dandruff, psoriasis, eczema, and skin vitality.</p>
             </div>
         </div>
     </div>
