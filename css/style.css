@@ -1848,8 +1848,20 @@ header.scrolled {
 
 @media (max-width: 768px) {
 
-    /* Fix Mobile Hero Tagline: Push content down to avoid logo overlap */
-    .hero { padding-top: 160px !important; min-height: 80vh !important; }
+    /* Fix Mobile Hero Tagline + Overlap */
+    .hero { padding-top: 180px !important; min-height: 85vh !important; }
+
+    /* Fix Mobile Hero Overlap: Increase trust bar margin and pin scroll indicator lower */
+    .hero-trust { 
+        margin-bottom: 180px !important; 
+        font-size: 0.65rem !important; 
+        gap: 12px !important;
+    }
+    .hero-scroll-indicator {
+        bottom: 30px !important;
+        transform: translateX(-50%) scale(0.9) !important;
+    }
+
     .hero-tagline { margin-top: 0 !important; }
 
 
