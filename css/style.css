@@ -1848,6 +1848,11 @@ header.scrolled {
 
 @media (max-width: 768px) {
 
+    /* Fix Mobile Hero Tagline: Push content down to avoid logo overlap */
+    .hero { padding-top: 160px !important; min-height: 80vh !important; }
+    .hero-tagline { margin-top: 0 !important; }
+
+
     /* Mobile Hero Fix: Move trust bar up to avoid scroll overlap */
     .hero-trust { 
         margin-bottom: 110px !important; 
@@ -2150,62 +2155,71 @@ header.scrolled {
 
 }
 
-/* ===== STICKY WIDGETS DESKTOP ===== */
+
+
+/* ===== STICKY WIDGETS DESKTOP (RIGHT + GLASS) ===== */
 @media (min-width: 769px) {
     .sticky-widgets {
         position: fixed;
-        left: 0;
+        right: 0; /* Move to right */
+        left: auto;
         top: 50%;
         transform: translateY(-50%);
         z-index: 9991;
         display: flex;
         flex-direction: column;
-        gap: 8px;
+        gap: 10px;
     }
     .sticky-widgets .widget {
-        background: rgba(11, 61, 61, 0.85);
-        backdrop-filter: blur(8px);
+        background: rgba(11, 61, 61, 0.4); /* Glass base */
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
         color: var(--white);
-        width: 50px;
-        height: 50px;
+        width: 55px;
+        height: 55px;
         display: flex;
         align-items: center;
         justify-content: center;
         text-decoration: none;
-        border-right: 2px solid var(--accent);
-        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: none;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
         overflow: hidden;
-        border-radius: 0 8px 8px 0;
+        border-radius: 12px 0 0 12px; /* Curves on the left */
+        box-shadow: -5px 5px 15px rgba(0,0,0,0.2);
     }
     .sticky-widgets .widget i {
-        font-size: 1.3rem;
-        min-width: 50px;
+        font-size: 1.4rem;
+        min-width: 55px;
         text-align: center;
-        transition: color 0.3s;
+        transition: transform 0.3s;
     }
     .sticky-widgets .widget span {
         max-width: 0;
         white-space: nowrap;
         opacity: 0;
         transition: all 0.3s;
-        font-size: 0.85rem;
+        font-size: 0.9rem;
         font-weight: 600;
-        padding-right: 0;
+        padding-left: 0;
     }
     .sticky-widgets .widget:hover {
-        width: 160px;
-        background: var(--accent);
+        width: 180px;
+        background: rgba(212, 178, 140, 0.9); /* Accent glass on hover */
         color: var(--primary);
+        border-color: var(--accent);
     }
-    .sticky-widgets .widget:hover i { color: var(--primary); }
+    .sticky-widgets .widget:hover i { color: var(--primary); transform: scale(1.1); }
     .sticky-widgets .widget:hover span {
-        max-width: 100px;
+        max-width: 120px;
         opacity: 1;
-        padding-right: 15px;
-        margin-left: -5px;
+        padding-left: 10px;
+        padding-right: 20px;
     }
-    .sticky-widgets .widget.wa:hover { background: #25D366; color: white; }
+    
+    /* Specific hover colors for glass effect */
+    .sticky-widgets .widget.wa:hover { background: rgba(37, 211, 102, 0.9); color: white; }
     .sticky-widgets .widget.wa:hover i { color: white; }
-    .sticky-widgets .widget.insta:hover { background: #E1306C; color: white; }
+    .sticky-widgets .widget.insta:hover { background: rgba(225, 48, 108, 0.8); color: white; }
     .sticky-widgets .widget.insta:hover i { color: white; }
 }
