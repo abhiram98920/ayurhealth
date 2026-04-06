@@ -1594,12 +1594,12 @@ header.scrolled {
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    padding-bottom: 120px; /* Strong gap under button */
+    padding-bottom: 70px; /* Balanced gap under button */
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
-    border-top: 1px solid rgba(212, 178, 140, 0.3);
+    border-top: 1px solid rgba(212, 178, 140, 0.4);
     background: #061e1e;
     position: relative;
     overflow: hidden;
@@ -1974,7 +1974,7 @@ header.scrolled {
     display: flex;
     justify-content: center;
     margin-top: 60px;
-    padding-bottom: 120px; /* Strong gap under button */
+    padding-bottom: 70px; /* Balanced gap under button */
 }
     .hero-btns a, .about-text .btn-primary, .view-all-wrap .btn-primary, .view-all-wrap a.btn-primary { 
         width: 100% !important; 
