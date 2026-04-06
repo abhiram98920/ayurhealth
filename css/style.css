@@ -1848,8 +1848,31 @@ header.scrolled {
 
 @media (max-width: 768px) {
 
-    /* Fix Mobile Hero Tagline + Overlap */
-    .hero { padding-top: 180px !important; min-height: 85vh !important; }
+    /* Fix Mobile Hero Tagline + Lifted Trust Bar */
+
+    /* Refine Mobile Hero: Manually lift trust bar and tagline */
+    .hero { 
+        padding-top: 150px !important; 
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: space-between !important;
+        padding-bottom: 80px !important;
+    }
+    .hero-content {
+        margin-top: 20px !important;
+    }
+    .hero-trust { 
+        position: relative !important;
+        top: -60px !important; /* Lifted up significantly */
+        font-size: 0.62rem !important; 
+        margin-bottom: 0 !important;
+        z-index: 10 !important;
+    }
+    .hero-scroll-indicator {
+        bottom: 20px !important;
+        z-index: 5 !important;
+    }
+
 
     /* Fix Mobile Hero Overlap: Increase trust bar margin and pin scroll indicator lower */
     .hero-trust { 
