@@ -1591,16 +1591,15 @@ header.scrolled {
 }
 
 .view-all-wrap {
-    padding-bottom: 150px; /* Extra generous gap for clinical feel */
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 36px;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 120px; /* Strong gap under button */
 }
 
 /* ===== FOOTER ===== */
 .site-footer {
-    border-top: 1px solid rgba(212, 178, 140, 0.25);
+    border-top: 1px solid rgba(212, 178, 140, 0.3);
     background: #061e1e;
     position: relative;
     overflow: hidden;
@@ -1971,12 +1970,12 @@ header.scrolled {
 @media (max-width: 768px) {
 
     /* Standardize main section buttons to full width */
-    .hero-btns, .view-all-wrap { 
-        width: 100%; 
-        display: flex; 
-        flex-direction: column; 
-        gap: 15px; 
-    }
+    .hero-btns, .view-all-wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    padding-bottom: 120px; /* Strong gap under button */
+}
     .hero-btns a, .about-text .btn-primary, .view-all-wrap .btn-primary, .view-all-wrap a.btn-primary { 
         width: 100% !important; 
         display: block !important; 
