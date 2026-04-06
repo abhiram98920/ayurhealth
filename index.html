@@ -55,7 +55,7 @@
             </form>
         </div>
         <button class="mobile-toggle" onclick="document.querySelector('.nav-center').classList.toggle('active')" aria-label="Menu" style="background:transparent; border:none; color:var(--cream); font-size:1.4rem; cursor:pointer; display:none;"><i class="fas fa-bars"></i></button>
-        <a href="#enquiry" class="connect-pill">Book Now</a>
+        <a href="javascript:void(0)" onclick="openEnquiry('General Booking')" class="connect-pill">Book Now</a>
     </div>
 </header>
 
@@ -85,7 +85,7 @@
         <h1>Heal From The Root.</h1>
         <p class="hero-sub">Clinical Ayurveda with measurable results.</p>
         <div class="hero-btns">
-            <a href="#enquiry" class="btn-primary">Book Consultation</a>
+            <a href="javascript:void(0)" onclick="openEnquiry('Consultation')" class="btn-primary">Book Consultation</a>
             <a href="#treatments" class="btn-secondary">Explore Treatments</a>
         </div>
         <div class="hero-trust">
@@ -116,8 +116,14 @@
             </div>
             <div class="about-text">
                 <span class="section-tag">Who We Are</span>
-                <h2>A Clinical Approach<br>To Ancient Medicine</h2>
-                <p>At Ayur Health, we integrate the rich heritage of Kerala Ayurveda with rigorous medical protocols. Every treatment is individually designed following a thorough constitutional assessment (<em>Prakriti</em> evaluation) by our qualified Vaidyas.</p>
+                <h2 class="about-heading">Where Ancient Healing Meets Clinical Precision</h2>
+                
+                <div class="about-microlines">
+                    <p>We combine Kerala Ayurveda with modern clinical protocols.</p>
+                    <p>Every treatment is tailored to your unique Prakriti.</p>
+                    <p>Delivered by certified Ayurvedic doctors.</p>
+                </div>
+
                 <div class="specialty-grid">
                     <div class="specialty-item">
                         <i class="fas fa-leaf"></i>
