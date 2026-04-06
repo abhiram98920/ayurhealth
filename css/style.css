@@ -327,17 +327,21 @@ header.scrolled {
 /* Scroll indicator — above stats bar */
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
+    bottom: 120px;
+    right: 60px;
+    left: auto;
+    transform: none;
     z-index: 50;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 8px;
-    opacity: 0.5;
-    pointer-events: none;
+    opacity: 0.6;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.3s;
 }
+.hero-scroll-indicator:hover { opacity: 1; }
 
 .hero-scroll-indicator span {
     font-size: 0.55rem;
