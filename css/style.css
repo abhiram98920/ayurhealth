@@ -145,6 +145,45 @@ header.scrolled {
     justify-content: flex-end;
 }
 
+/* Header Search */
+.header-search { position: relative; }
+.search-toggle {
+    background: transparent; border: none; color: var(--cream);
+    font-size: 1.15rem; cursor: pointer; transition: color 0.3s ease;
+}
+.search-toggle:hover { color: var(--accent); }
+#main-header.scrolled .search-toggle { color: var(--primary); }
+
+.search-form {
+    position: absolute; right: 0; top: 150%;
+    background: var(--white);
+    border-radius: 30px;
+    padding: 5px 5px 5px 20px;
+    display: flex; align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    transform: translateY(15px);
+    opacity: 0; pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 280px; z-index: 1000;
+}
+.search-form.active {
+    transform: translateY(0);
+    opacity: 1; pointer-events: auto;
+}
+.search-form input {
+    border: none; outline: none; background: transparent;
+    width: 100%; font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--primary); font-size: 0.95rem;
+}
+.search-form button[type="submit"] {
+    background: var(--accent); color: var(--primary);
+    border: none; border-radius: 50%;
+    width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer; transition: background 0.3s ease; flex-shrink:0;
+}
+.search-form button[type="submit"]:hover { background: #c39c71; }
+
 .connect-pill {
     padding: 11px 28px !important;
     background: var(--accent) !important;
@@ -1219,8 +1258,8 @@ header.scrolled {
 
 /* ===== TESTIMONIALS ===== */
 .testimonials-section {
-    background: #061e1e;
-    padding: 80px 0;
+    background: linear-gradient(to right, rgba(6,30,30,0.9), rgba(6,30,30,0.85)), url('../assets/1544367567-0f2fcb009e0b.jpg') center/cover no-repeat;
+    padding: 100px 0;
     overflow: hidden;
     position: relative;
 }
