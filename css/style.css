@@ -327,10 +327,10 @@ header.scrolled {
 /* Scroll indicator — above stats bar */
 .hero-scroll-indicator {
     position: absolute;
-    bottom: 145px;
+    bottom: 40px;
     left: 50%;
     transform: translateX(-50%);
-    z-index: 20;
+    z-index: 50;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1731,8 +1731,29 @@ header.scrolled {
     .package-grid { grid-template-columns: repeat(2, 1fr); }
     header { padding: 16px 24px; grid-template-columns: 1fr auto; }
     header.scrolled { padding: 12px 24px; }
-    .nav-center { display: none; }
-    .nav-right { grid-column: 2; }
+    
+    .nav-center { 
+        display: none; 
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #0b3d3d;
+        flex-direction: column;
+        padding: 20px 0;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    }
+    .nav-center.active {
+        display: flex !important;
+    }
+    .nav-links {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .nav-right { grid-column: 2; justify-self: end; }
+    .mobile-toggle { display: block !important; }
+    .connect-pill { display: none !important; }
     .hero-stats { display: none; }
     .hero-vertical-text, .hero-vertical-text-left { display: none; }
     .about-section, .specstrip, .treatments-section, .packages-section,
