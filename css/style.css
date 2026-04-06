@@ -1278,7 +1278,7 @@ header.scrolled {
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(212,178,140,0.15);
-    padding: 45px 35px;
+    padding: 35px 30px;
     border-radius: 16px;
     color: var(--cream);
     position: relative;
@@ -1289,23 +1289,23 @@ header.scrolled {
 }
 @media(min-width: 900px) {
     .testi-card {
-        min-width: calc(40% - 16px); /* Desktop: make them slightly wider than 33% to allow scrolling of 3 items */
+        min-width: calc(50% - 12px); /* Show exactly 2 cards in a row */
     }
 }
 
 .testi-quote-icon {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: var(--accent);
     opacity: 0.15;
-    margin-bottom: 22px;
+    margin-bottom: 20px;
     line-height: 1;
 }
 
 .testi-text {
-    font-size: 1.1rem;
-    line-height: 1.68;
+    font-size: 1.05rem;
+    line-height: 1.6;
     color: rgba(255,255,255,0.85);
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     flex: 1;
 }
 
