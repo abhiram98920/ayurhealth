@@ -1083,6 +1083,7 @@ header.scrolled {
 /* ===== PACKAGES ===== */
 .packages-section {
     background: linear-gradient(to bottom, #0b3d3d, #061e1e);
+    padding-top: 100px;
     position: relative;
     overflow: hidden;
 }
@@ -1909,7 +1910,7 @@ header.scrolled {
 }
 
 .spec-card::after {
-    content: "Explore ➔";
+    content: "Book Now ➔";
     position: absolute;
     bottom: 20px;
     right: 20px;
