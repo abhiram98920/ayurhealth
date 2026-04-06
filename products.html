@@ -360,7 +360,9 @@
     document.addEventListener('DOMContentLoaded', () => {
         // Header scroll
         const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+        const checkScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
 
         // Filter tabs
         document.querySelectorAll('.tab-btn').forEach(btn => {

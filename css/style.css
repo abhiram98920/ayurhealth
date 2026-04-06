@@ -152,20 +152,24 @@ header.scrolled {
     font-size: 1.15rem; cursor: pointer; transition: color 0.3s ease;
 }
 .search-toggle:hover { color: var(--accent); }
-#main-header.scrolled .search-toggle { color: var(--primary); }
+#main-header.scrolled .search-toggle { color: var(--accent); }
+
 
 .search-form {
     position: absolute; right: 0; top: 150%;
-    background: var(--white);
-    border-radius: 30px;
-    padding: 5px 5px 5px 20px;
+    background: rgba(11, 61, 61, 0.98);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(212, 178, 140, 0.3);
+    border-radius: 40px;
+    padding: 6px 6px 6px 24px;
     display: flex; align-items: center;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.4);
     transform: translateY(15px);
     opacity: 0; pointer-events: none;
-    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    width: 280px; z-index: 1000;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    width: 320px; z-index: 1000;
 }
+
 .search-form.active {
     transform: translateY(0);
     opacity: 1; pointer-events: auto;
@@ -285,7 +289,7 @@ header.scrolled {
     display: block;
     width: 40px;
     height: 1px;
-    background: var(--cream);
+    background: var(--primary);
     flex-shrink: 0;
 }
 
@@ -1436,7 +1440,7 @@ header.scrolled {
 
 /* ===== BLOG ===== */
 .blog-section {
-    background: var(--cream);
+    background: var(--primary);
     padding: 80px 0;
     position: relative;
 }
@@ -1524,7 +1528,7 @@ header.scrolled {
 .blog-read {
     width: 34px; height: 34px;
     border-radius: 50%;
-    background: var(--cream);
+    background: var(--primary);
     display: flex; align-items: center; justify-content: center;
     color: var(--primary);
     transition: var(--transition);
@@ -1728,7 +1732,7 @@ header.scrolled {
 }
 
 .layer-overlap.light {
-    background: var(--cream);
+    background: var(--primary);
     color: var(--primary);
 }
 
@@ -1807,3 +1811,11 @@ header.scrolled {
     .footer-inner { grid-template-columns: 1fr; gap: 35px; }
     .blog-header { flex-direction: column; gap: 18px; }
 }
+
+.blog-section .section-tag { color: var(--accent); }
+.blog-section h2 { color: var(--white); }
+.blog-section .blog-sub { color: rgba(255,255,255,0.7); }
+.blog-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+.blog-card-body h3 { color: var(--white); }
+.blog-card-body p { color: rgba(255,255,255,0.6); }
+.blog-card-footer { border-top: 1px solid rgba(255,255,255,0.08); color: rgba(255,255,255,0.45); }

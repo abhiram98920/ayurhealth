@@ -326,7 +326,7 @@
             <!-- Podi Kizhi -->
             <div class="treatment-card" data-cat="kizhi">
                 <div class="card-img-wrap">
-                    <img src="assets/kerala_kizhi_massage.png" alt="Podi Kizhi">
+                    <img src="assets/kerala_podi_kizhi.png" alt="Podi Kizhi">
                     <span class="card-badge">Kizhi</span>
                 </div>
                 <div class="card-body">
@@ -345,7 +345,7 @@
             <!-- Naranga Kizhi -->
             <div class="treatment-card" data-cat="kizhi">
                 <div class="card-img-wrap">
-                    <img src="assets/kerala_kizhi_massage.png" alt="Naranga Kizhi">
+                    <img src="assets/kerala_naranga_kizhi.png" alt="Naranga Kizhi">
                     <span class="card-badge">Kizhi</span>
                 </div>
                 <div class="card-body">
@@ -364,7 +364,7 @@
             <!-- Njavara Kizhi -->
             <div class="treatment-card" data-cat="kizhi">
                 <div class="card-img-wrap">
-                    <img src="assets/kerala_kizhi_massage.png" alt="Njavara Kizhi">
+                    <img src="assets/kerala_njavara_kizhi.png" alt="Njavara Kizhi">
                     <span class="card-badge">Kizhi</span>
                 </div>
                 <div class="card-body">
@@ -383,7 +383,7 @@
             <!-- Udwarthanam -->
             <div class="treatment-card" data-cat="body">
                 <div class="card-img-wrap">
-                    <img src="assets/kerala_herbs.png" alt="Udwarthanam">
+                    <img src="assets/kerala_udwarthanam.png" alt="Udwarthanam">
                     <span class="card-badge">Body</span>
                 </div>
                 <div class="card-body">
@@ -440,7 +440,7 @@
             <!-- Tharpanam -->
             <div class="treatment-card" data-cat="wellness">
                 <div class="card-img-wrap">
-                    <img src="assets/kerala_herbs.png" alt="Tharpanam">
+                    <img src="assets/kerala_consultation.png" alt="Tharpanam">
                     <span class="card-badge">Wellness</span>
                 </div>
                 <div class="card-body">
@@ -988,7 +988,9 @@
     document.addEventListener('DOMContentLoaded', () => {
         // Header scroll
         const header = document.getElementById('main-header');
-        window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 60));
+        const checkScroll = () => header.classList.toggle('scrolled', window.scrollY > 60);
+        window.addEventListener('scroll', checkScroll);
+        checkScroll();
 
         // Filter tabs
         document.querySelectorAll('.tab-btn').forEach(btn => {
