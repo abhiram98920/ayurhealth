@@ -434,6 +434,12 @@ header.scrolled {
 }
 
 /* ===== HERO BIG WATERMARK (like Snaillia 'face oil') ===== */
+@keyframes floatWatermark {
+    0% { transform: translateY(-48%) translateX(0); }
+    50% { transform: translateY(-48%) translateX(-8%); }
+    100% { transform: translateY(-48%) translateX(0); }
+}
+
 .hero-watermark {
     position: absolute;
     right: -2vw;
@@ -449,6 +455,7 @@ header.scrolled {
     line-height: 1;
     white-space: nowrap;
     user-select: none;
+    animation: floatWatermark 25s ease-in-out infinite;
 }
 
 /* Shimmer on card enquire buttons too */
