@@ -1600,6 +1600,7 @@ header.scrolled {
 /* ===== FOOTER ===== */
 .site-footer {
     border-top: 1px solid rgba(212, 178, 140, 0.4);
+    border-top: 1px solid rgba(212, 178, 140, 0.4);
     background: #061e1e;
     position: relative;
     overflow: hidden;
@@ -1846,6 +1847,46 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
+
+    /* Mobile Hero Fix: Move trust bar up to avoid scroll overlap */
+    .hero-trust { 
+        margin-bottom: 110px !important; 
+        font-size: 0.65rem !important; 
+        gap: 10px !important;
+    }
+    .hero-trust .divider { height: 8px !important; }
+    
+    /* Sticky Widgets Mobile (Bottom Bar) */
+    .sticky-widgets {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: rgba(11, 61, 61, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+        border-top: 1px solid rgba(212, 178, 140, 0.3);
+        padding: 0 10px;
+    }
+    .sticky-widgets .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    .sticky-widgets .widget i { font-size: 1.2rem; color: var(--accent); }
+    .sticky-widgets .widget span { opacity: 0.8; font-weight: 500; }
+    
+    /* Ensure page content doesn't get hidden by the bottom bar */
+    body { padding-bottom: 65px; }
+
     .testi-card { min-width: 100%; width: 100%; flex: 0 0 100%; padding: 25px 20px; }
     .blog-card { min-width: calc(90vw - 24px); }
     .spec-cards { grid-template-columns: 1fr; }
@@ -1882,6 +1923,46 @@ header.scrolled {
 }
 
 @media (max-width: 768px) {
+
+    /* Mobile Hero Fix: Move trust bar up to avoid scroll overlap */
+    .hero-trust { 
+        margin-bottom: 110px !important; 
+        font-size: 0.65rem !important; 
+        gap: 10px !important;
+    }
+    .hero-trust .divider { height: 8px !important; }
+    
+    /* Sticky Widgets Mobile (Bottom Bar) */
+    .sticky-widgets {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: rgba(11, 61, 61, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+        border-top: 1px solid rgba(212, 178, 140, 0.3);
+        padding: 0 10px;
+    }
+    .sticky-widgets .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    .sticky-widgets .widget i { font-size: 1.2rem; color: var(--accent); }
+    .sticky-widgets .widget span { opacity: 0.8; font-weight: 500; }
+    
+    /* Ensure page content doesn't get hidden by the bottom bar */
+    body { padding-bottom: 65px; }
+
     .about-heading { font-size: 2.2rem !important; line-height: 1.2; }
     .specialty-grid { grid-template-columns: 1fr; gap: 20px; }
     .about-img-wrap { height: 320px; }
@@ -1956,6 +2037,46 @@ header.scrolled {
 
 /* Mobile responsive Specialties */
 @media (max-width: 768px) {
+
+    /* Mobile Hero Fix: Move trust bar up to avoid scroll overlap */
+    .hero-trust { 
+        margin-bottom: 110px !important; 
+        font-size: 0.65rem !important; 
+        gap: 10px !important;
+    }
+    .hero-trust .divider { height: 8px !important; }
+    
+    /* Sticky Widgets Mobile (Bottom Bar) */
+    .sticky-widgets {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: rgba(11, 61, 61, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+        border-top: 1px solid rgba(212, 178, 140, 0.3);
+        padding: 0 10px;
+    }
+    .sticky-widgets .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    .sticky-widgets .widget i { font-size: 1.2rem; color: var(--accent); }
+    .sticky-widgets .widget span { opacity: 0.8; font-weight: 500; }
+    
+    /* Ensure page content doesn't get hidden by the bottom bar */
+    body { padding-bottom: 65px; }
+
     .spec-cards {
         display: grid;
         grid-template-columns: 1fr;
@@ -1968,6 +2089,46 @@ header.scrolled {
 
 
 @media (max-width: 768px) {
+
+    /* Mobile Hero Fix: Move trust bar up to avoid scroll overlap */
+    .hero-trust { 
+        margin-bottom: 110px !important; 
+        font-size: 0.65rem !important; 
+        gap: 10px !important;
+    }
+    .hero-trust .divider { height: 8px !important; }
+    
+    /* Sticky Widgets Mobile (Bottom Bar) */
+    .sticky-widgets {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 65px;
+        background: rgba(11, 61, 61, 0.95);
+        backdrop-filter: blur(10px);
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        z-index: 9999;
+        border-top: 1px solid rgba(212, 178, 140, 0.3);
+        padding: 0 10px;
+    }
+    .sticky-widgets .widget {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: var(--white);
+        font-size: 0.65rem;
+        gap: 4px;
+    }
+    .sticky-widgets .widget i { font-size: 1.2rem; color: var(--accent); }
+    .sticky-widgets .widget span { opacity: 0.8; font-weight: 500; }
+    
+    /* Ensure page content doesn't get hidden by the bottom bar */
+    body { padding-bottom: 65px; }
+
 
     /* Standardize main section buttons to full width */
     .hero-btns, .view-all-wrap {
@@ -1987,4 +2148,64 @@ header.scrolled {
     .spec-card::after { display: none !important; }
     .spec-card { padding-bottom: 25px; } /* Ensure text doesn't hit the bottom edge */
 
+}
+
+/* ===== STICKY WIDGETS DESKTOP ===== */
+@media (min-width: 769px) {
+    .sticky-widgets {
+        position: fixed;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 9991;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .sticky-widgets .widget {
+        background: rgba(11, 61, 61, 0.85);
+        backdrop-filter: blur(8px);
+        color: var(--white);
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        border-right: 2px solid var(--accent);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        overflow: hidden;
+        border-radius: 0 8px 8px 0;
+    }
+    .sticky-widgets .widget i {
+        font-size: 1.3rem;
+        min-width: 50px;
+        text-align: center;
+        transition: color 0.3s;
+    }
+    .sticky-widgets .widget span {
+        max-width: 0;
+        white-space: nowrap;
+        opacity: 0;
+        transition: all 0.3s;
+        font-size: 0.85rem;
+        font-weight: 600;
+        padding-right: 0;
+    }
+    .sticky-widgets .widget:hover {
+        width: 160px;
+        background: var(--accent);
+        color: var(--primary);
+    }
+    .sticky-widgets .widget:hover i { color: var(--primary); }
+    .sticky-widgets .widget:hover span {
+        max-width: 100px;
+        opacity: 1;
+        padding-right: 15px;
+        margin-left: -5px;
+    }
+    .sticky-widgets .widget.wa:hover { background: #25D366; color: white; }
+    .sticky-widgets .widget.wa:hover i { color: white; }
+    .sticky-widgets .widget.insta:hover { background: #E1306C; color: white; }
+    .sticky-widgets .widget.insta:hover i { color: white; }
 }
